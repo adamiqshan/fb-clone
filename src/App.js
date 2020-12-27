@@ -3,12 +3,13 @@ import Header from "./Header";
 import Sidebar from "./Sidebar"
 import Feed from './Feed';
 import "./App.css"
-import Widgets from './Widgets';
+
 import Login from './Login';
+import { useStateValue } from './StateProvider';
 
 function App() {
 
-  const user = null;
+  const [{ user }, dispatch] = useStateValue()
 
   return (
     <div className="app">
@@ -19,7 +20,7 @@ function App() {
           <div className="app__body">
             <Sidebar />
             <Feed />
-            <Widgets />
+
           </div>
         </>)
       }
