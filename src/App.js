@@ -4,15 +4,16 @@ import Sidebar from "./Sidebar"
 import Feed from './Feed';
 import "./App.css"
 import Widgets from './Widgets';
+import Login from './Login';
 
 function App() {
 
-  const user = 'adam';
+  const user = null;
 
   return (
     <div className="app">
 
-      {!user ? (<h1>Login please!</h1>) : (
+      {!user ? (<Login />) : (
         <>
           <Header />
           <div className="app__body">

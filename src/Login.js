@@ -1,0 +1,28 @@
+import React from 'react'
+import "./Login.css"
+import { auth, provider } from "./firebase"
+
+
+function Login() {
+
+    const signIn = () => {
+        auth
+            .signInWithPopup(provider)
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => alert(error.message))
+    }
+
+    return (
+        <div className="login">
+            <div className="login__logo">
+                <img src="https://classicrock995.com/wp-content/uploads/2020/11/Facebook-logo.png" alt="" />
+                <img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo.png" alt="" />
+            </div>
+            <button type="submit" onClick={signIn}>SIGN IN</button>
+        </div>
+    )
+}
+
+export default Login
