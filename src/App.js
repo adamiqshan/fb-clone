@@ -6,6 +6,7 @@ import "./App.css"
 
 import Login from './Login';
 import { useStateValue } from './StateProvider';
+import Contacts from './Contacts';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
           <div className="app__body">
             <Sidebar />
             <Feed />
-
+            <Contacts />
           </div>
         </>)
       }

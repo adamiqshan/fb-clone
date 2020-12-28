@@ -21,7 +21,7 @@ function Header() {
     return (
         <div className="header">
             <div className="header__left">
-                <img src="https://classicrock995.com/wp-content/uploads/2020/11/Facebook-logo.png" alt="fb_logo" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Facebook_f_Logo_%28with_gradient%29.svg/1200px-Facebook_f_Logo_%28with_gradient%29.svg.png" alt="fb_logo" />
                 <div className="header__input">
                     <SearchIcon />
                     <input type="text" placeholder="Search Facebook" />

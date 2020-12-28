@@ -1,0 +1,27 @@
+.contacts{
+    flex: 0.4;
+    padding-right: 10px;
+}
+
+.contacts__top{
+    display: flex;
+    padding: 30px 10px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.contacts__top>h4{
+    font-size: medium;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.contacts__icons{
+    display: flex;
+    margin-left: 60px;
+}
+
+.contacts__icons > .MuiSvgIcon-root {
+    margin: 5px;
+}
