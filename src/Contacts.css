@@ -5,10 +5,9 @@
 
 .contacts__top{
     display: flex;
-    padding: 30px 10px;
+    padding: 30px 10px 5px;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 
 .contacts__top>h4{
@@ -24,4 +23,16 @@
 
 .contacts__icons > .MuiSvgIcon-root {
     margin: 5px;
+}
+
+.contacts__list{
+    display: flex;
+    align-items: center;
+    margin-left: 65px;
+    font-size: small;
+    padding: 5px 0;
+}
+
+.contacts__list > h4 {
+    margin-left: 10px;
 }
