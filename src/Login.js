@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Login.css"
-import { auth, provider } from "./firebase"
+import db, { auth, provider } from "./firebase"
 import { actionTypes } from './reducer'
 import { useStateValue } from './StateProvider'
 
@@ -13,6 +13,15 @@ function Login() {
         auth
             .signInWithPopup(provider)
             .then((result) => {
+                console.log(result)
+                if (result.additionalUserInfo.isNewUser) {
+                    db.collection('contacts').add(
+                        {
+                            username: result.user.displayName,
+                            profilePic: result.user.photoURL
+                        }
+                    )
+                }
                 dispatch({
                     type: actionTypes.SET_USER,
                     user: result.user

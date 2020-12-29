@@ -12,13 +12,13 @@ function Contacts() {
     const [contacts, setContacts] = useState([])
 
     useEffect(() => {
-        db.collection("posts").onSnapshot((snapshot) =>
+        db.collection("contacts").onSnapshot((snapshot) =>
             setContacts(snapshot.docs.map((doc) => ({
                 id: doc.id,
                 data: doc.data()
             })))
         );
-        console.log(contacts)
+
     }, []);
 
     return (
